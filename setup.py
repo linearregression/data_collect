@@ -4,7 +4,7 @@ ez_setup.use_setuptools()
 from setuptools import setup, find_packages
 
 setup(
-    name = "sqor-handle-cms",
+    name = "data_collect",
     version = "0.0.1",
     packages = find_packages(),
 
@@ -14,11 +14,11 @@ setup(
     'riak>=2.0.3'],
 
     # PyPI metadata
-    author = "Yoway Buorn",
-    author_email = "yoway@sumologic.com",
-    description = "Sumo Logic Python SDK",
+    author = "Linear Regression",
+    author_email = "wawawa@wawawa.com",
+    description = "data collect from various channels and store into spark fof futher analysis",
     license = "PSF",
-    keywords = "sqor cms mma python rest api twitter instangram facebook",
-    url = "https://github.com/AmpliySocial/sqor_algo.git",
+    keywords = "data collect python twitter facebook instangram spark analysis",
+    url = "https://github.com/linearregression/data_collect.git",
 	zip_safe = True
 )
