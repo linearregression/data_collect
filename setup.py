@@ -15,13 +15,13 @@ PACKAGES = ['sqor-data-collect']
 DEPENDENCIES = ['requests>=2.2.1', 'requests-cache>=0.4.4', 'requests-oauth2>=0.2.0','riak>=2.0.3']
 
 def GetVersion():
-   """ Gets version of package from common.py
+    """ Gets version of package from common.py
        Returns: 
          The version of library
-   """
-  with open(os.path.join('sqor-data-collect', 'common.py')) as versions_file:
-    source = versions_file.read()
-  return re.search('\\nVERSION = \'(.*?)\'', source).group(1)    
+    """
+    with open(os.path.join('sqor-data-collect', 'common.py')) as versions_file:
+        source = versions_file.read()
+    return re.search('\\nVERSION = \'(.*?)\'', source).group(1)    
 
 longdescription ="""
 ===========================================
@@ -64,17 +64,17 @@ Santiy Test
 """
 
 setup(
-    name = "sqor-data-collect",
+    name = 'sqor-data-collect',
     version = GetVersion(),
     packages = find_packages(),
     install_requires = DEPENDENCIES,
     # PyPI metadata
-    author = "Linear Regression",
-    author_email = "wawawa@wawawa.com",
+    author = 'Linear Regression',
+    author_email = 'wawawa@wawawa.com',
     description = longdescription,
-    platform = ""
-    license = "PSF",
-    keywords = "data collect python twitter facebook instangram spark analysis",
-    url = "https://github.com/linearregression/data_collect.git",
+    platform = 'any',
+    license = 'PSF',
+    keywords = 'data collect python twitter facebook instangram spark analysis',
+    url = 'https://github.com/linearregression/data_collect.git',
     zip_safe = True
 )
