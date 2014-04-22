@@ -18,8 +18,8 @@ def get_version():
        Returns:
          The version of library
     """
-    with open(os.path.join('sqor-data-collect', 'common.py')) as versions_file:
-        source = versions_file.read()
+    with open(os.path.join(os.getcwd(), 'sqor-data-collect', 'common.py')) as version_file:
+        source = version_file.read()
     return (re.search('\\nVERSION = \'(.*?)\'', source)).group(1)
 
 
@@ -72,7 +72,7 @@ setup(
     author='Linear Regression',
     author_email='wawawa@wawawa.com',
     description=long_description,
-    platform='any',
+    platforms='any',
     license='PSF',
     keywords='data collect python twitter facebook instangram spark analysis',
     url='https://github.com/linearregression/data_collect.git',

@@ -5,6 +5,6 @@ import sys
 import warnings
 import logging
 
-VERSION = "0.0.1"
+VERSION = '0.0.1'
 
 
