@@ -1,6 +1,11 @@
+# -*- coding: utf-8 -*-
+"""Abstract Base Class for Task"""
+
+
 import abc
 
 class TaskCollect(object):
+    """Abstract Base Class for Task"""
     __metaclass__ = abc.ABCMeta
 
     @abc.abstractmethod
