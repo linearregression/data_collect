@@ -18,24 +18,20 @@ class TaskCollect(object):
         """Return list of handles to be processed. """
         return
 
-
     @abc.abstractmethod
     def get_next_handle(self):
         """Return handle next in queue to be process etc """
         return
-
 
     @abc.abstractmethod
     def report_status(self):
         """Report current progress status of task. """
         return
 
-
     @abc.abstractmethod
     def store(self):
         """Action to store the result. """
         return
-
 
     @abc.abstractmethod
     def remove_context(self):
