@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from __future__ import absolute_import
 
 from celery import Celery
@@ -8,8 +10,9 @@ collect_facebook_worker =  Celery( include = ['tasks.collect_facebook'])
 # import celery config
 collect_facebook_worker.config_from_object('celeryconfig')
 
-#start
+# start worker instance
 
-if __name __ == '__main__':
+if __name__ == '__main__':
     collect_facebook_worker.start()
+
 

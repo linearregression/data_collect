@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from __future__ import absolute_import
 
 from celery import Celery
@@ -10,6 +12,6 @@ collect_instagram_worker.config_from_object('celeryconfig')
 
 #start
 
-if __name __ == '__main__':
+if __name__ == '__main__':
     collect_instagram_worker.start()
 
