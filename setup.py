@@ -20,7 +20,7 @@ def get_version():
     """
     with open(os.path.join('sqor-data-collect', 'common.py')) as versions_file:
         source = versions_file.read()
-    return re.search('\\nVERSION = \'(.*?)\'', source).group(1)
+    return (re.search('\\nVERSION = \'(.*?)\'', source)).group(1)
 
 
 long_description = """
@@ -71,7 +71,7 @@ setup(
     # PyPI metadata
     author='Linear Regression',
     author_email='wawawa@wawawa.com',
-    description=LongDescription,
+    description=long_description,
     platform='any',
     license='PSF',
     keywords='data collect python twitter facebook instangram spark analysis',
