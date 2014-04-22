@@ -18,7 +18,7 @@ def get_version():
        Returns:
          The version of library
     """
-    with open(os.path.join(os.getcwd(), 'sqor-data-collect', 'common.py')) as version_file:
+    with open(os.path.join(os.getcwd(), 'tasks', 'common.py')) as version_file:
         source = version_file.read()
     return (re.search('\\nVERSION = \'(.*?)\'', source)).group(1)
 
