@@ -4,7 +4,6 @@ __author__ = 'Ed'
 
 import os
 import re
-import sys
 import ez_setup
 ez_setup.use_setuptools()
 
@@ -12,18 +11,19 @@ from setuptools import setup, find_packages
 
 PACKAGES = ['sqor-data-collect']
 
-DEPENDENCIES = ['requests>=2.2.1', 'requests-cache>=0.4.4', 'requests-oauth2>=0.2.0','riak>=2.0.3']
+DEPENDENCIES = ['requests>=2.2.1', 'requests-cache>=0.4.4', 'requests-oauth2>=0.2.0', 'riak>=2.0.3']
 
-def GetVersion():
+def get_version():
     """ Gets version of package from common.py
-       Returns: 
+       Returns:
          The version of library
     """
     with open(os.path.join('sqor-data-collect', 'common.py')) as versions_file:
         source = versions_file.read()
-    return re.search('\\nVERSION = \'(.*?)\'', source).group(1)    
+    return re.search('\\nVERSION = \'(.*?)\'', source).group(1)
 
-longdescription ="""
+
+long_description = """
 ===========================================
 Sqor Data Collection Worker Tool
 ===========================================
@@ -64,17 +64,17 @@ Santiy Test
 """
 
 setup(
-    name = 'sqor-data-collect',
-    version = GetVersion(),
-    packages = find_packages(),
-    install_requires = DEPENDENCIES,
+    name='sqor-data-collect',
+    version=get_version(),
+    packages=find_packages(),
+    install_requires=DEPENDENCIES,
     # PyPI metadata
-    author = 'Linear Regression',
-    author_email = 'wawawa@wawawa.com',
-    description = longdescription,
-    platform = 'any',
-    license = 'PSF',
-    keywords = 'data collect python twitter facebook instangram spark analysis',
-    url = 'https://github.com/linearregression/data_collect.git',
-    zip_safe = True
+    author='Linear Regression',
+    author_email='wawawa@wawawa.com',
+    description=LongDescription,
+    platform='any',
+    license='PSF',
+    keywords='data collect python twitter facebook instangram spark analysis',
+    url='https://github.com/linearregression/data_collect.git',
+    zip_safe=True
 )
