@@ -10,6 +10,6 @@ collect_instagram_worker.config_from_object('celeryconfig')
 
 #start
 
- if __name __ == '__main__':
+if __name __ == '__main__':
     collect_instagram_worker.start()
 
