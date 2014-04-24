@@ -6,6 +6,7 @@ import oauth2
 import gc
 import requests
 import task_base
+from celery.decorators import task
 
 
 class CollectFacebook(TaskCollect):
@@ -14,6 +15,10 @@ class CollectFacebook(TaskCollect):
     default_access_token = "733753326637318|v5JLdgJ48ST2Qzo0ujoKz7azv_o"
 
     def __init__(self, Context):
+
+    @task_postrun.collect 
+    def collect_after_task(**kwargs): 
+        gc.collect() 
 
     @task_postrun.collect 
     def collect_after_task(**kwargs): 
