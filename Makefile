@@ -6,7 +6,8 @@ get-tag:
 	./get_version.sh
 
 get-deps:
-	pip install flask boto six
+	#pip install flask boto six celery
+	python setup.py install
 
 clean_pyc:
 	find $(PYC_DIR) -type f -name "*.pyc" -delete

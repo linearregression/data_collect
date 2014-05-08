@@ -12,7 +12,7 @@ test_require = []
 PY3 = sys.version_info[0]
 
 
-requires = ['requests>=2.2.1', 'requests-cache>=0.4.4','oauthlib>=0.3.8','six>=1.2.0','riak>=2.0.3','celery>=3.1.11']
+requires = ['requests>=2.2.1', 'requests-cache>=0.4.4','oauthlib>=0.3.8','six>=1.2.0','riak>=2.0.3','celery>=3.1.11', 'boto>=2.27.0', 'boto_rsync>=0.8.1']
 
 if int(PY3) == 3:
     requires += ['python3-openid>=3.0.1', 'requests-oauthlib>=0.3.0,<0.3.2']
