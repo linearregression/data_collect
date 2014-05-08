@@ -1,20 +1,21 @@
-import ez_setup
+import ez_setup, sys
+import version
 ez_setup.use_setuptools()
 
 from setuptools import setup, find_packages
+# from version import get_version
+
+def get_version():
+    return '0.0.1'
 
 test_require = []
 PY3 = sys.version_info[0]
 
 
-requires = ['requests>=2.2.1', 'requests-cache>=0.4.4',
-            'oauthlib>=0.3.8', 'six>=1.2.0',
-            'riak>=2.0.3',
-            'celery>=3.1.11'],
+requires = ['requests>=2.2.1', 'requests-cache>=0.4.4','oauthlib>=0.3.8','six>=1.2.0','riak>=2.0.3','celery>=3.1.11']
 
 if int(PY3) == 3:
-    requires += ['python3-openid>=3.0.1',
-                 'requests-oauthlib>=0.3.0,<0.3.2']
+    requires += ['python3-openid>=3.0.1', 'requests-oauthlib>=0.3.0,<0.3.2']
 else:
     requires += ['python-openid>=2.2', 'requests-oauthlib>=0.3.0']
 
@@ -31,7 +32,7 @@ setup(
     license = "PSF",
     keywords = "data collect python twitter facebook instangram spark analysis",
     url = "https://github.com/linearregression/data_collect.git",
-    zip_safe = True
+    zip_safe = True,
     test_requires = ['sure>=1.2.5', 'httpretty>=0.8.0', ',pck>=1.0.1'],
     test_suite='data_collect.tests'
 )
