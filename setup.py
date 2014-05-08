@@ -28,7 +28,7 @@ setup(
     # PyPI metadata
     author = "Linear Regression",
     author_email = "wawawa@wawawa.com",
-    description = "data collect from various channels and store into spark fof futher analysis",
+    description = "data collect from various channels to local file to bulk load for futher analysis",
     license = "PSF",
     keywords = "data collect python twitter facebook instangram spark analysis",
     url = "https://github.com/linearregression/data_collect.git",
