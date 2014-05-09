@@ -1,8 +1,8 @@
-import config
-from config import Config
 from __future__ import absolute_import
+
 from celery import Celery
 from celery.utils.log import get_task_logger
+from config import Config
 
 def get_task_modules():
     with file('task.cfg') as f:

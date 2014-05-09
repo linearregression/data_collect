@@ -1,8 +1,9 @@
 ''' Config file for Celery Daemon '''
-import sys
+import sys, os
 
-sys.path.append('.')
-sys.path.append('./tasks')
+cwd = os.getcwd()
+sys.path.append(cwd)
+sys.path.append(cwd+'tasks')
 
 # default RabbitMQ
 VHOST = '/dev.sqor.analytics'
