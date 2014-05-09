@@ -1,4 +1,8 @@
 ''' Config file for Celery Daemon '''
+import sys
+
+sys.path.append('.')
+sys.path.append('./tasks')
 
 # default RabbitMQ
 VHOST = '/dev.sqor.analytics'
@@ -12,3 +16,6 @@ CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_ACCEPT_CONTENT = ['json']
 
+CELERY_ENABLE_UTC = True
+
+CELERY_QUEUE_HA_POLICY = 'HA'
