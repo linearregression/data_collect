@@ -16,14 +16,10 @@ from boto import connect_dynamodb as DynoConn
 from boto.dynamodb2.exceptions import *
 from boto.dynamodb.condition import *
 
-from pymonad import *
-
 __all__ = ['get_table_or_create', 'store_handle', 'get_handle']
 
 #__all__ = ['query_user_stats', 'query_account_sqor']
 
-AWS_ACCESS_KEY_ID = 'AKIAJ7IOL7OS4357ZABA'
-AWS_SECRET_ACCESS_KEY = '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'
 worker_schema=[HashKey('handle', data_type=STRING), RangeKey('follower_count')]
 worker_throughput {'read':10, 'write': 10}]
 #worker_indexes = [AllIndex('EverythingIndex', parts=[HashKey('handle', data_type=NUMBER), ]
@@ -36,7 +32,7 @@ def create_table(handle_table, conn):
         raise ValueError(str(handle_table)+' cannot be empty string')
 
 def get_table(handle_table, conn):
-    with 
+     
     
 
 def store_handle(file_name, conn):
