@@ -1,7 +1,10 @@
 ''' Config file for Celery Daemon '''
 
 # default RabbitMQ
-BROKER_URL = 'amqp://sqoradmin:VFNz0n3!@devrabbitmq2.sqor.com:5672'
+VHOST = '/dev.sqor.analytics'
+BROKER_URL = 'amqp://sqoradmin:VFNz0n3!@devrabbitmq2.sqor.com:5672'+VHOST
+
+
 CELERY_RESULT_BACKEND = 'amqp'
 CELERY_RESULT_EXCHANGE = 'status.collect.data'
 CELERY_TASK_RESULT_EXPIRES = 36000 #10 hrs

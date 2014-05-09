@@ -9,4 +9,8 @@ def get_task_modules():
         tasks = cfg.datatasks
         return list(set([x.get('module') for x in tasks]))
 
+celery = Celery(include = get_task_modules())
+
+celery.config_from_object('celeryconfig')
+
 
