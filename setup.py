@@ -11,7 +11,7 @@ from setuptools import setup, find_packages
 
 PACKAGES = ['sqor-data-collect']
 
-DEPENDENCIES = ['requests>=2.2.1', 'requests-cache>=0.4.4', 'requests-oauth2>=0.2.0', 'celery>=3.1.11', 'riak>=2.0.3', 'boto>=2.27.0']
+DEPENDENCIES = ['requests>=2.2.1', 'requests-cache>=0.4.4', 'requests-oauth2>=0.2.0', 'celery>=3.1.11', 'riak>=2.0.3', 'boto>=2.27.0', 'pymonad>=1.0']
 
 def get_version():
     """ Gets version of package from common.py
