@@ -18,9 +18,9 @@ def get_version():
        Returns:
          The version of library
     """
-    with open(os.path.join(os.getcwd(), 'tasks', 'common.py')) as version_file:
+    with open(os.path.join(os.getcwd(), 'VERSION')) as version_file:
         source = version_file.read()
-    return (re.search('\\nVERSION = \'(.*?)\'', source)).group(1)
+	return source
 
 
 long_description = """
@@ -66,7 +66,7 @@ Santiy Test
 setup(
     name='sqor-data-collect',
     version=get_version(),
-    packages=find_packages()exclude=['tests', 'tests.*'],
+    packages=find_packages(exclude=['tests', 'tests.*']),
     install_requires=DEPENDENCIES,
     # PyPI metadata
     author='Linear Regression',
