@@ -66,7 +66,7 @@ Santiy Test
 setup(
     name='sqor-data-collect',
     version=get_version(),
-    packages=find_packages(),
+    packages=find_packages()exclude=['tests', 'tests.*'],
     install_requires=DEPENDENCIES,
     # PyPI metadata
     author='Linear Regression',
